@@ -13,11 +13,13 @@ public class GreatestFactorUsingWhileLoop {
             int greatestFactor = 1;
 			
 			//loop for finding factor
-            for (int i = number - 1; i >= 1; i--) {
-                if (number % i == 0) {
-                    greatestFactor = i; //comparing and storing greater values 
-                    break;
+			int counter = number - 1;
+            while(counter >= 1) {
+                if (number % counter == 0 ) {
+                    greatestFactor = counter; //comparing and storing greater values 
+					break;
                 }
+				counter--;
             }
             System.out.println("The greatest factor of " + number + " is: " + greatestFactor); //printing greatest value
         }
